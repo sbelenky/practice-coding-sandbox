@@ -1,14 +1,17 @@
 package sandbox.messaging;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MessagingService {
 
-    private String publishedMessage;
+    private final List<String> publishedMessages = new ArrayList<>();
 
     public void publishMessage(String message) {
-        publishedMessage = message;
+        publishedMessages.add(message);
     }
 
-    public String getPublishedMessage() {
-        return publishedMessage;
+    public List<String> getPublishedMessages() {
+        return publishedMessages;
     }
 }
